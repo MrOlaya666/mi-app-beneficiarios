@@ -1,66 +1,57 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+// app/page.js
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+      <h1 style={{ color: '#1a237e', fontSize: '32px', marginBottom: '8px' }}>
+        Sistema de Gestión de Beneficiarios
+      </h1>
+      <p style={{ color: '#666', marginBottom: '40px' }}>
+        Programa de apoyo educativo — Bogotá D.C.
+      </p>
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: '20px',
+        marginTop: '32px'
+      }}>
+        <a href="/localidades" style={cardStyle}>
+          <div style={{ fontSize: '40px' }}>📍</div>
+          <h3>Localidades</h3>
+          <p>Consultar, agregar y editar localidades</p>
+        </a>
+
+        <a href="/universidades" style={cardStyle}>
+          <div style={{ fontSize: '40px' }}>🏛️</div>
+          <h3>Universidades</h3>
+          <p>Gestión de instituciones educativas</p>
+        </a>
+
+        <a href="/matriz" style={cardStyle}>
+          <div style={{ fontSize: '40px' }}>📊</div>
+          <h3>Matriz</h3>
+          <p>Registros completos de beneficiarios</p>
+        </a>
+
+        <a href="/convocatorias" style={cardStyle}>
+          <div style={{ fontSize: '40px' }}>📋</div>
+          <h3>Convocatorias</h3>
+          <p>Resumen por convocatoria</p>
+        </a>
+      </div>
     </div>
   );
 }
+
+const cardStyle = {
+  display: 'block',
+  padding: '32px',
+  backgroundColor: 'white',
+  border: '2px solid #e3e8f0',
+  borderRadius: '12px',
+  textDecoration: 'none',
+  color: '#1a237e',
+  textAlign: 'center',
+  transition: 'all 0.2s',
+  boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+};
