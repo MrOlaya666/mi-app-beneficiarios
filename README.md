@@ -39,3 +39,105 @@ La base de datos está alojada en **Railway** y cuenta con **15 tablas**:
 ---
 
 ## 🏗️ Arquitectura MVC
+
+mi-app-beneficiarios/
+├── db/
+│   └── connection.js          → Conexión Pool MySQL (Railway)
+├── models/
+│   ├── localidadModel.js      → CRUD Localidades
+│   ├── universidadModel.js    → CRUD Universidades
+│   ├── matrizModel.js         → Consulta + Insert + Delete Matriz
+│   └── convocatoriaModel.js   → Consulta Convocatorias
+├── app/
+│   ├── api/                   → Controladores (Rutas API REST)
+│   │   ├── localidades/
+│   │   ├── universidades/
+│   │   ├── matriz/
+│   │   ├── convocatorias/
+│   │   └── catalogos/
+│   ├── localidades/           → Vistas Localidades
+│   ├── universidades/         → Vistas Universidades
+│   ├── matriz/                → Vistas Matriz
+│   ├── convocatorias/         → Vistas Convocatorias
+│   ├── layout.js              → Navegación Global
+│   └── page.js                → Página de Inicio
+
+---
+
+## ✅ Funcionalidades
+
+| Módulo | Consulta | Insertar | Editar | Eliminar |
+|---|:---:|:---:|:---:|:---:|
+| Localidades | ✅ | ✅ | ✅ | ✅ |
+| Universidades | ✅ | ✅ | ✅ | ✅ |
+| Matriz de Beneficiarios | ✅ | ✅ | ❌ | ✅ |
+| Convocatorias | ✅ | ❌ | ❌ | ❌ |
+
+---
+
+## 📸 Pantallazos del Sistema
+
+### 🏠 Página de Inicio
+![Inicio](screenshots/Inicio.png)
+
+### 📍 Gestión de Localidades
+![Localidades](screenshots/localidades.png)
+
+### 🏛️ Gestión de Universidades
+![Universidades](screenshots/universidades.png)
+
+### 📊 Matriz de Beneficiarios
+![Matriz](screenshots/matriz.png)
+
+### ➕ Nuevo Registro en Matriz
+![Nuevo Registro](screenshots/nuevo-registro.png)
+
+### 📋 Convocatorias
+![Convocatorias](screenshots/convocatorias.png)
+
+---
+
+## 🚀 Cómo ejecutar el proyecto localmente
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/MrOlaya666/mi-app-beneficiarios.git
+cd mi-app-beneficiarios
+```
+
+### 2. Instalar dependencias
+```bash
+npm install
+```
+
+### 3. Configurar variables de entorno
+Crea un archivo `.env.local` en la raíz del proyecto:
+
+### 4. Ejecutar en desarrollo
+```bash
+npm run dev
+```
+
+### 5. Abrir en el navegador
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Frontend:** Next.js 15, React, CSS Modules
+- **Backend:** Next.js API Routes (App Router)
+- **Base de Datos:** MySQL en Railway
+- **Conector:** mysql2
+- **Arquitectura:** MVC (Modelo - Vista - Controlador)
+- **Control de Versiones:** Git + GitHub
+
+---
+
+## 👨‍💻 Desarrollado por
+
+**MrOlaya666**
+Proyecto académico ADSO — 2026
+Bogotá D.C., Colombia 🇨🇴
+
+
+
