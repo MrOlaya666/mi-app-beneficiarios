@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Sistema de Gestión de Beneficiarios
+### Programa de Apoyo Educativo — Bogotá D.C.
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![MySQL](https://img.shields.io/badge/MySQL-Railway-blue?style=for-the-badge&logo=mysql)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript)
+![GitHub](https://img.shields.io/badge/GitHub-Repositorio-181717?style=for-the-badge&logo=github)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📋 Descripción del Proyecto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sistema web desarrollado con **Next.js** y **MySQL** para la gestión y consulta de beneficiarios del programa de apoyo educativo de Bogotá D.C. Permite registrar, consultar, editar y eliminar información de beneficiarios, universidades, localidades y convocatorias, siguiendo una arquitectura **MVC (Modelo - Vista - Controlador)**.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗄️ Base de Datos
 
-## Learn More
+La base de datos está alojada en **Railway** y cuenta con **15 tablas**:
 
-To learn more about Next.js, take a look at the following resources:
+| Tabla | Descripción |
+|---|---|
+| `matriz` | Tabla principal con todos los registros de beneficiarios |
+| `convocatoria` | Convocatorias del programa (JE1, JE2... JU6) |
+| `localidad` | Localidades de Bogotá |
+| `universidades` | 59 instituciones de educación superior |
+| `nucleo_conocimiento` | Núcleos básicos del conocimiento |
+| `modalidad` | Modalidades académicas |
+| `sexo` | Género del beneficiario |
+| `edad` | Rangos de edad |
+| `grupo_etnico` | Grupos étnicos |
+| `sisben` | Clasificación Sisbén |
+| `victima_conflicto` | Víctima del conflicto armado |
+| `discapacidad` | Condición de discapacidad |
+| `saber_11` | Percentil Pruebas Saber 11 |
+| `zona` | Zona geográfica |
+| `sector_colegio` | Sector del colegio de procedencia |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏗️ Arquitectura MVC
