@@ -51,4 +51,3 @@ npm-debug.log*
 .env
 node_modules/
 .next/
-screenshots/
