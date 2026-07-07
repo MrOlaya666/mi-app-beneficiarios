@@ -46,3 +46,9 @@ next-env.d.ts
 
 # Logs
 npm-debug.log*
+
+.env.local
+.env
+node_modules/
+.next/
+screenshots/
